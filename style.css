@@ -1,0 +1,36 @@
+.hero-section {
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataset-container {
+    background-color: #f8f9fa;
+}
+
+.box {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sumber {
+    width: 80%;
+    margin: auto;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.content {
+    text-align: justify;
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+}

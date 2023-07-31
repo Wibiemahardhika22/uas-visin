@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UAS Mata Kuliah Visualisasi Informasi Tahun 2023">
+
+    <title>UAS Visin | Wibie Mahardhika Adi - 2100016081</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Awal  Navbar -->
+    <header class="navbar navbar-expand-lg bg-light sticky-lg-top">
+        <div class="container-fluid mx-3">
+
+            <a class="navbar-brand" href="#">Visin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link mx-2" href="#">Home</a>
+                    <a class="nav-link mx-2" href="#data">Data</a>
+                    <a class="nav-link mx-2" href="#chart">Chart</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Akhir Navbar -->
+
+    <!-- Awal Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center m-3">
+                <div class="col-md-6">
+                    <h1 class="display-4">Data Kematian di Indonesia</h1>
+                    <p class="lead">Temukan informasi terkini tentang data kematian di seluruh wilayah Indonesia.</p>
+                </div>
+                <div class="col-md-6">
+                    <!-- Gambar Hero -->
+                    <img src="https://img.freepik.com/free-vector/data-report-illustration-concept_114360-883.jpg?size=626&ext=jpg"
+                        alt="Gambar Hero" class="img-fluid mt-2">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Hero Section -->
+
+    <!-- Waves -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#f8f9fa" fill-opacity="1"
+            d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,256C672,288,768,288,864,277.3C960,267,1056,245,1152,218.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+
+    <!-- Awal Spreadsheets -->
+    <section id="data" class="dataset-container">
+        <h1 class="text-center mb-5">Tabel Data Kematian di Indonesia</h1>
+
+        <div class="box">
+            <iframe
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSJuvSADb1G5Y4cF9OpuOTDMb9dwUe5rQIumSAmZd4lgmi8hxRztEw_vF242FDt41t-jdEsHieBDaXu/pubhtml?widget=true&amp;headers=false"
+                style="width: 100%; height: 500px; border: none;"></iframe>
+        </div>
+        <p class="sumber">Sumber: <a href="https://www.kaggle.com/datasets/hendratno/cause-of-death-in-indonesia"
+                target="_blank" rel="noopener noreferrer">Causes of Death in Indonesia</a></p>
+
+        <!-- Waves -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,96L48,122.7C96,149,192,203,288,234.7C384,267,480,277,576,240C672,203,768,117,864,85.3C960,53,1056,75,1152,96C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- Akhir Spreadsheets -->
+
+    <!-- Awal Chart -->
+    <section id="chart">
+        <div class="my-4">
+            <div class="box">
+                <canvas id="chart1"></canvas>
+            </div>
+        </div>
+
+        <div class="my-4">
+            <div class="box">
+                <canvas id="chart2"></canvas>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Chart -->
+
+    <!-- Awal Narasi -->
+    <section class="box mb-5">
+        <div>
+            <h1 class="text-center my-5 px-4">Tentang Data Kematian di Indonesia</h1>
+            <div class="px-4 content">
+                <p>Selama dua dekade terakhir, Indonesia telah menghadapi berbagai tantangan terkait kematian yang
+                    berasal dari berbagai jenis bencana dan penyakit. Data yang dikumpulkan dari tahun 2000 hingga 2022
+                    mencerminkan perjalanan panjang dalam upaya penanganan dan mitigasi terhadap ancaman kematian yang
+                    datang dari berbagai sumber.</p>
+                <p>Berdasarkan data kematian akibat bencana alam, kita dapat melihat perubahan drastis pada tahun 2004
+                    dengan mencatatkan angka kematian yang sangat tinggi akibat bencana alam, seperti gempa bumi dan
+                    tsunami di Aceh. Namun, seiring waktu, upaya mitigasi dan penguatan sistem peringatan dini tampaknya
+                    telah memberikan dampak positif dengan mengurangi angka kematian dari tahun ke tahun.</p>
+                <p>Di sisi lain, bencana non alam dan penyakit juga menjadi penyumbang signifikan dalam data kematian
+                    selama dua puluh dua tahun ini. Penyakit menular, seperti AIDS dan flu burung, pernah menyebabkan
+                    lonjakan angka kematian pada tahun-tahun tertentu. Namun, pemerintah dan masyarakat bersama-sama
+                    berjuang untuk menangani wabah dan mengurangi angka kematian terkait penyakit tersebut melalui
+                    program-program pencegahan dan pengobatan yang lebih baik.</p>
+                <p>Virus COVID-19 juga menjadi penyumbang signifikan dalam data kematian selama beberapa tahun terakhir.
+                    Pada awal periode tersebut, belum terdapat catatan kematian terkait COVID-19. Namun, sejak tahun
+                    2020, terjadi lonjakan yang signifikan, mencapai angka 22,138 kematian pada tahun tersebut dan
+                    meningkat drastis menjadi 121,956 kematian pada tahun 2021. Pada tahun 2022, angka kematian COVID-19
+                    tetap tinggi dengan 12,876 kematian. Data ini menggambarkan dampak besar pandemi COVID-19 terhadap
+                    Indonesia, dan menunjukkan perlunya upaya berkelanjutan dalam penanganan dan mitigasi untuk
+                    melindungi masyarakat dari dampaknya.</p>
+                <p>Selain itu, bencana sosial juga menjadi sorotan dalam data ini. Peristiwa-peristiwa seperti aksi
+                    teror dan sabotase, meskipun memiliki angka kematian yang relatif rendah, tetap menjadi perhatian
+                    bagi penguatan keamanan dan ketertiban dalam masyarakat.</p>
+                <p>Tren kematian akibat banjir dan banjir bandang juga menarik perhatian. Terlihat bahwa angka kematian
+                    meningkat pada tahun-tahun tertentu, kemudian mengalami penurunan dalam periode lain. Hal ini
+                    menandakan perlunya penguatan infrastruktur dan program mitigasi bencana guna mengurangi dampak
+                    fatal dari bencana banjir.</p>
+                <p>Melalui analisis data ini, dapat dilihat bagaimana perubahan sosial, lingkungan, dan kesehatan telah
+                    mempengaruhi angka kematian di Indonesia selama dua dekade terakhir. Peningkatan akses terhadap
+                    perawatan kesehatan, program-program pencegahan, dan penanganan bencana yang lebih baik telah
+                    menjadi kunci dalam menekan angka kematian secara keseluruhan.</p>
+                <p>Namun, perjalanan ini juga menunjukkan bahwa tantangan kematian di Indonesia tidaklah statis dan
+                    berubah dari waktu ke waktu. Oleh karena itu, melanjutkan upaya pencegahan, penanganan, dan mitigasi
+                    tetap menjadi prioritas untuk mencapai masa depan yang lebih aman dan lebih baik bagi seluruh
+                    masyarakat Indonesia.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Narasi -->
+
+    <!--  Awal Footer -->
+    <footer>
+        <div class="my-4">
+            <p>&copy; 2023 Data Kematian Indonesia. All rights reserved.</p>
+            <p>Dibuat oleh <a href="https://github.com/Wibiemahardhika22" target="_blank">Wibie Mahardhika Adi</a></p>
+        </div>
+    </footer>
+    <!--  Akhir Footer -->
+
+
+    <!-- My Script -->
+    <script src="script.js"></script>
+    
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
