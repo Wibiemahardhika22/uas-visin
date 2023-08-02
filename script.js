@@ -92,13 +92,16 @@ async function drawChart2() {
         datasets.push({
             label: type,
             data: data,
-            backgroundColor: getRandomColor(),
+            backgroundColor: getRandomColor(), 
+            borderColor: 'rgba(0, 0, 0, 0.2)', 
+            borderWidth: 1,
+            fill: true,
         });
     }
 
     const ctx = document.getElementById('chart2').getContext('2d');
     const chart2 = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: labels.slice(1),
             datasets: datasets,
